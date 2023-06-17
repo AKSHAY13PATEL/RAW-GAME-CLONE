@@ -19,8 +19,6 @@ const useData = function <T>(
   useEffect(
     () => {
       const controller = new AbortController();
-      console.log(depn);
-      console.log(requestConfig);
       setIsLoading(true);
       apiClient
         .get<fetchResponse<T>>(endpoint, {
