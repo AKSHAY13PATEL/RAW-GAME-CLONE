@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../services/apiClient";
-import { fetchResponse } from "./useData";
+import apiClient, { fetchResponse } from "../services/apiClient";
 import genre from "../data/genre";
 
 export interface Genre {
