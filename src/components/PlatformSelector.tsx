@@ -9,7 +9,6 @@ interface Props {
 }
 
 const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
-  console.log(import.meta.env.VITE_API_KEY);
   const { data, error } = usePlatform();
 
   if (error) return null;
