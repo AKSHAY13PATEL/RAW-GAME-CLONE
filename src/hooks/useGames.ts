@@ -1,7 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { GameQuery } from "../App";
 import APIClient, { fetchResponse } from "../services/apiClient";
-import { Platform } from "./usePlatform";
+import { Platform } from "./usePlatforms";
 
 export interface Game {
   id: number;
