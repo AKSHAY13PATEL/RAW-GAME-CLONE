@@ -1,5 +1,22 @@
+import { Heading, Spinner, Text } from "@chakra-ui/react";
+import { useParams } from "react-router-dom";
+import useGame from "../hooks/useGame";
+
 const GameDetailsPage = () => {
-  return <div>GameDetailsPage</div>;
+  const { slug } = useParams();
+
+  const { data: game, isLoading, error } = useGame(slug!); // ! - force the type script comiler to accept slug as not null value
+  // because this game detail page is loaded only when there is slug in route
+
+  if (isLoading) return <Spinner />;
+  if (error) throw error;
+
+  return (
+    <>
+      <Heading>{game.name}</Heading>
+      <Text>{game?.description_raw}</Text>
+    </>
+  );
 };
 
 export default GameDetailsPage;

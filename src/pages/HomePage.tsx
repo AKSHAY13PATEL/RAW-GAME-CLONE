@@ -17,7 +17,6 @@ const HomePage = () => {
           base: "1fr",
           lg: "200px 1fr",
         }}
-        marginX={5}
       >
         <Show above="lg">
           <GridItem area="aside">
