@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Screenshots } from "../entities/Screenshots";
+import Screenshots from "../entities/Screenshots";
 import APIClient from "../services/apiClient";
 
 const useScreenshot = (gameSlug: string) => {
